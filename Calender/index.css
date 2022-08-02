@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =================================== */
+
+:root{
+    --main-colour: linear-gradient(#ffc107,#e01e63);
+    --second-colour:linear-gradient(#2196f1,#31ff38);
+}
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #161623;
+    overflow: hidden;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    background: var(--main-colour);
+    transform: translate(-250px, -120px);
+}
+
+section::after{
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--second-colour);
+    border-radius: 100%;
+    transform: translate(250px, 150px);
+}
+
+.calendar-box{
+ position: relative;
+ z-index: 1000;
+}
+
+.content{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#dycalendar{
+    width: 100%;
+    padding: 20px;
+    height: 500px;
+}
+
+#dycalendar table {
+    width: 100%;
+    margin-top: 40px;
+    border-right: 5px;
+}
+
+#dycalendar table tr:nth-child(1) td{
+    background: var(--main-colour);
+    color: #fff;
+    border-right: 4px;
+    font-weight: 600;
+    border-radius: 100%;
+}
+
+#dycalendar table td{
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#dycalendar table td:hover{
+    background: var(--main-colour);
+    color: #fff !important;
+}
+
+.dycalendar-month-container .dycalendar-today-date, 
+.dycalendar-month-container .dycalendar-target-date{
+    background: var(--main-colour);
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn{
+    left: 4px;
+    background: var(--main-colour);
+     color: #fff; 
+    width: 44px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn {
+    right : 4px;
+    background: var(--main-colour);
+    color: #fff;
+    width: 44px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
